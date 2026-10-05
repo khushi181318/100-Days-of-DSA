@@ -1,0 +1,41 @@
+# Day 01- Climbing Stairs
+
+**LeetCode:** 70. Climbing Stairs
+
+## Problem
+
+There is a staircase with `n` steps.
+I can climb either 1 step or 2 steps at a time.
+
+I have to find the total number of different ways to reach the top.
+
+### Example
+
+For `n = 3`:
+
+* 1 + 1 + 1
+* 1 + 2
+* 2 + 1
+
+So the answer is `3`.
+
+## Approach
+
+I noticed that to reach the current step, I can come from either the previous step or the step before that.
+
+So:
+
+`ways(n) = ways(n-1) + ways(n-2)`
+
+This is similar to the Fibonacci sequence.
+
+I used two variables instead of an array to save space.
+
+## Complexity
+
+* Time: `O(n)`
+* Space: `O(1)`
+
+## What I learned
+
+I learned how a simple problem can be solved using the Dynamic Programming approach and how to optimize the space by storing only the last two values.
